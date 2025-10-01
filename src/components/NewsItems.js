@@ -15,13 +15,13 @@ export default class NewsItems extends Component {
                             right:"0"
                         }}
                     >
-                        <span class="badge rounded-pill bg-danger" style={{ left: "87%", zIndex: 1 }}> {name} </span>
+                        <span className="badge rounded-pill bg-danger" style={{ left: "87%", zIndex: 1 }}> {name} </span>
                     </div>
                     <img src={imageUrl} className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="News">{myTitle}...</h5>
                         <p className="card-text">{description}...</p>
-                        <p className="card-text"><small class="text-muted">by {author} at {date}</small></p>
+                        <p className="card-text"><small className="text-muted">by {author} at {date}</small></p>
 
                         <a href={url} target="_blank" className="btn btn-sm btn-primary">Read More</a>
                     </div>

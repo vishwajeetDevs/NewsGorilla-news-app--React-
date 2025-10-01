@@ -80,8 +80,8 @@ export default class News extends Component {
                             loader={<h4>Loading ... </h4>}
                         >
                             <div className="container row">
-                                {this.state.articles.map((elements) => {
-                                    return <div className="col-md-4 my-2">
+                                {this.state.articles.map((elements, index) => {
+                                    return <div className="col-md-4 my-2" key={index}>
                                         <NewsItems myTitle={elements.title} description={elements.description} imageUrl={elements.urlToImage} url={elements.url} author={elements.author} date={new Date(elements.publishedAt).toGMTString()} name={elements.source.name} />
                                     </div>
                                 })}
