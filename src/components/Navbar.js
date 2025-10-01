@@ -1,44 +1,78 @@
-import React, { Component } from 'react'
-import News from './News'
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
 
 export class Navbar extends Component {
-
-
     render() {
         return (
             <div>
                 <nav className="navbar fixed-top navbar-expand-lg bg-body-tertiary">
                     <div className="container-fluid">
-                        <Link className="navbar-brand" to="/top-headlines">NewsGorilla</Link>
-                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        {/* Logo points to home */}
+                        <Link className="navbar-brand" to="/">NewsGorilla</Link>
+
+                        <button 
+                            className="navbar-toggler" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#navbarSupportedContent" 
+                            aria-controls="navbarSupportedContent" 
+                            aria-expanded="false" 
+                            aria-label="Toggle navigation"
+                        >
                             <span className="navbar-toggler-icon"></span>
                         </button>
+
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/business">Business</Link>
+                                    <NavLink 
+                                        className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} 
+                                        to="/business"
+                                    >
+                                        Business
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/entertainment">Entertainment</Link>
+                                    <NavLink 
+                                        className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} 
+                                        to="/entertainment"
+                                    >
+                                        Entertainment
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/health">Health</Link>
+                                    <NavLink 
+                                        className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} 
+                                        to="/health"
+                                    >
+                                        Health
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/science">Science</Link>
+                                    <NavLink 
+                                        className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} 
+                                        to="/science"
+                                    >
+                                        Science
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/sports">Sports</Link>
+                                    <NavLink 
+                                        className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} 
+                                        to="/sports"
+                                    >
+                                        Sports
+                                    </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link" aria-current="page" to="/technology">Technology</Link>
+                                    <NavLink 
+                                        className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} 
+                                        to="/technology"
+                                    >
+                                        Technology
+                                    </NavLink>
                                 </li>
                             </ul>
-                            <form className="d-flex" role="search">
-                                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                                <button className="btn btn-outline-success" type="submit">Search</button>
-                            </form>
                         </div>
                     </div>
                 </nav>
@@ -47,4 +81,4 @@ export class Navbar extends Component {
     }
 }
 
-export default Navbar
+export default Navbar;

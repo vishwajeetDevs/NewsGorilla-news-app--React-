@@ -4,7 +4,6 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import LoadingBar from 'react-top-loading-bar'
 
 
-
 export default class News extends Component {
     articles = []
     capitalizeFirstLetter(val) {
@@ -76,7 +75,7 @@ export default class News extends Component {
                         <InfiniteScroll
                             dataLength={this.state.articles.length}
                             next={this.fetchMoreData}
-                            hasMore={this.state.articles.length != this.state.totalResults}
+                            hasMore={this.state.articles.length !== this.state.totalResults}
                             loader={<h4>Loading ... </h4>}
                         >
                             <div className="container row">
