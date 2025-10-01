@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import News from './News'
 import { Link } from 'react-router-dom';
 
-export class navbar extends Component {
+export class Navbar extends Component {
 
 
     render() {
@@ -47,4 +47,4 @@ export class navbar extends Component {
     }
 }
 
-export default navbar
+export default Navbar
