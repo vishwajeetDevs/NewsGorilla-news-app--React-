@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
 import News from './components/News';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 export default class App extends Component {
   state = {
@@ -45,7 +45,6 @@ export default class App extends Component {
               element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="technology" pageSize={6} category="technology" />}
             />
           </Routes>
-
         </Router>
       </div>
     );
